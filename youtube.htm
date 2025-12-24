@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <!-- CSP: permette solo iframe da YouTube -->
-    <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self';
-                   frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
+<meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self';
+        frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+      ">
 
-    <!-- Referrer meno restrittivo -->
-    <meta name="referrer" content="origin">
+<meta name="referrer" content="origin">
 
-    <title>YouTube Embed Relay</title>
+<title>YouTube Embed Relay</title>
 
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #000;
-        }
-        iframe {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+<style>
+    body {
+        margin: 0;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    iframe {
+        width: 560px;
+        height: 315px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+</style>
 </head>
 <body>
 
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube-nocookie.com/embed/6zqCk7GNZPY?si=3ANViahQ_xURoK85"
-    title="YouTube video"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-</iframe>
+<div id="player"></div>
+
+<script>
+(function () {
+    const params = new URLSearchParams(window.location.search);
+    const videoId = params.get("v");
+
+    // YouTube video ID valido: 11 caratteri, lettere, numeri, _ e -
+    const validId = /^[a-zA-Z0-9_-]{11}$/;
+
+    if (!videoId || !validId.test(videoId)) {
+        document.body.innerHTML =
+            "<p style='color:white;font-family:sans-serif'>Video non valido</p>";
+        return;
+    }
+
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://www.youtube-nocookie.com/embed/" + videoId;
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute(
+        "allow",
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    );
+
+    document.getElementById("player").appendChild(iframe);
+})();
+</script>
 
 </body>
 </html>
