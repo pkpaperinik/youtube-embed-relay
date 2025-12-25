@@ -6,8 +6,8 @@ class YoutubeEmbed extends HTMLElement {
 
 		const shadow = this.attachShadow({mode:'open'});
 
-		this.width = 560;
-		this.height = 315;
+		this.width = 690;
+		this.height = 330;
 		this.title = '';
 		this.videoid = null;
 
