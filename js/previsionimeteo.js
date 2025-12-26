@@ -6,7 +6,7 @@
 
 let weatherWidget = {
     settings: {
-        api_key: 'f461a7fd1227f659911ba65b230e3209',
+        api_key: '40f23bd5d689cbf22f1a4d03d3339007',
         weather_url: 'https://api.openweathermap.org/data/2.5/weather',
         forecast_url: 'https://api.openweathermap.org/data/2.5/forecast',
         search_type: 'city_name',
