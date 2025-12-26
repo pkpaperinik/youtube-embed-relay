@@ -1,0 +1,98 @@
+#container {
+ background: #e3e3e3;
+ border: 0px solid black;
+ width:1030px;
+ height: auto;
+ display: flex;
+ flex-wrap: wrap;
+
+
+
+ justify-content: flex-start;
+ -webkit-justify-content: flex-start;
+}
+
+
+
+
+#box-1 {
+ background: black;
+ border: 0px solid black;
+ order: 1;
+ -webkit-order: 1;
+}
+#box-2 {
+ background: black;
+ border: 0px solid black;
+ order: 2;
+ -webkit-order: 2;
+}
+#box-3 {
+ background: black;
+ border: 0px solid black;
+ order: 3;
+ -webkit-order: 3;
+}
+
+#box-cam_1 {
+ background: black;
+ border: 0px solid black;
+ order: 4;
+ -webkit-order: 4;
+}
+#box-cam_2 {
+ background: black;
+ border: 0px solid black;
+ order: 5;
+ -webkit-order: 5;
+}
+#box-news {
+ background: black;
+ border: 0px solid black;
+ order: 3;
+ -webkit-order: 6;
+}
+#box-cam_3 {
+ background: black;
+ border: 0px solid black;
+ order: 7;
+ -webkit-order: 7;
+}
+#box-cam_4 {
+ background: black;
+ border: 0px solid black;
+ order: 8;
+ -webkit-order: 8;
+}
+#box-cam_5 {
+ background: black;
+ border: 0px solid black;
+ order: 9;
+ -webkit-order: 9;
+}
+#box-cam_6 {
+ background: black;
+ border: 0px solid black;
+ order: 10;
+ -webkit-order: 10;
+}
+#box-cam_4, #box-cam_5, #box-cam_7, #box-cam_8, #box-cam_9, #box-cam_10  {
+ padding: 0px;
+ width: 330px;
+ height: 220px;
+}
+#box-1, #box-2 {
+ padding: 0px;
+ width: 330px;
+ height: 80px;
+}
+#box-3 {
+ padding: 0px;
+ width: 360px;
+ height: 80px;
+}
+#box-news  {
+ padding: 0px;
+ width: 3600px;
+ height: 690px;
+}

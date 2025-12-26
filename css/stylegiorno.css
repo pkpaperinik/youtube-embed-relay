@@ -1,0 +1,135 @@
+/* Pure CSS Post Tags */
+* {  -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+
+   -webkit-transition: all .1s linear 0;
+ -moz-transition: all .1s linear 0;
+ transition: all .1s linear 0;
+
+}
+body { font-family:"Lucida Sans Unicode";}
+
+
+
+.calendar, .calendar2, .calendar3{
+	top:0em;
+	left:0em;
+	padding-top:5px;
+	width:120px;
+	height:80px;
+	background:#ededef;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededef), to(#ccc));
+	background: -moz-linear-gradient(top,  #ededef,  #ccc);
+	font:bold 30px/50px "Lucida Sans Unicode", Arial Black, Arial, Helvetica, sans-serif;
+	text-align:center;
+	color:#000;
+
+	text-shadow:#fff 0 1px 0;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	position:absolute;
+	-moz-box-shadow:0 2px 2px #888;
+	-webkit-box-shadow:0 2px 2px #888;
+	box-shadow:0 2px 2px #888;
+	}
+
+.calendar2 {
+     left:5.1em;
+     width:200px;
+     font:bold 25px/50px "Lucida Sans Unicode", Arial Black, Arial, Helvetica, sans-serif;
+    }
+.calendar3 {
+     left:0em;
+     width:360px;
+     font:bold 30px/50px "Lucida Sans Unicode", Arial Black, Arial, Helvetica, sans-serif;
+    }
+.temperature{
+  position:relative;
+  left: 130px;
+  text-align:left;
+}
+
+.thumbnail {
+  position: absolute;
+  top: 0px;
+   left: 20px;
+  height: 80%;
+
+}
+
+.termo{
+  position:absolute;
+  top: 10px;
+  left: 140px;
+  height: 50%;
+  text-align:left;
+}
+
+.calendar em, .calendar2 em, .calendar3 em{
+	display:block;
+	font:14px/26px "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-shadow:#00365a 0 -1px 0;
+	background:#04599a;
+	background:-webkit-gradient(linear, left top, left bottom, from(#04599a), to(#00365a));
+	background:-moz-linear-gradient(top,  #04599a,  #00365a);
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+	border-top:1px solid #00365a;
+	}
+
+.calendar:before, .calendar:after, .calendar2:before, .calendar2:after, .calendar3:before, .calendar3:after{
+	content:'';
+	float:left;
+	position:absolute;
+	top:5px;
+	width:8px;
+	height:8px;
+	background:#111;
+	z-index:1;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	-moz-box-shadow:0 1px 1px #fff;
+	-webkit-box-shadow:0 1px 1px #fff;
+	box-shadow:0 1px 1px #fff;
+	}
+.calendar:before, .calendar2:before, .calendar3:before{left:11px;}
+.calendar:after, .calendar2:after, .calendar3:after{right:11px;}
+
+.calendar em:before, .calendar em:after, .calendar2 em:before, .calendar2 em:after, .calendar3 em:before, .calendar3 em:after{
+	content:'';
+	float:left;
+	position:absolute;
+	top:-5px;
+	width:4px;
+	height:14px;
+	background:#dadada;
+	background:-webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#aaa));
+	background:-moz-linear-gradient(top,  #f1f1f1,  #aaa);
+	z-index:2;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	}
+.calendar em:before, .calendar2 em:before, .calendar3 em:before{left:13px;}
+.calendar em:after, .calendar2 em:after, .calendar2 em:before{right:13px;}
+#container {
+  animation: responsive 15s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes responsive {
+  0%, 100% {
+    width: 100%;
+  }
+  50% {
+    width: 110px;
+  }
+}

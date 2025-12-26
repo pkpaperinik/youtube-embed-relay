@@ -1,0 +1,91 @@
+@font-face
+			{
+				font-family: "Roadgeek2005SeriesD";
+				
+			}
+			
+			body, *
+			{
+			
+			}
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td
+			{ 
+				margin: 0;
+				padding: 0;
+			}
+				
+			fieldset,img
+			{ 
+				border: 0;
+			}
+			
+				
+			/* Settin' up the page */
+			
+			html, body, #main
+			{
+				overflow: hidden; /* */
+			}
+			
+			body
+			{
+				color: white;
+				font-family: 'Roadgeek2005SeriesD', sans-serif;
+				font-size: 20px;
+				line-height: 24px;
+			}
+			body, html, #main
+			{
+			background-image: url("background.png");
+				background: black !important;
+			}
+			
+			td
+			{
+			background-repeat: no-repeat;			
+			}
+			h1
+			{
+				font-size: 40px;
+				line-height: 40px;
+				margin-top: 0px;
+				margin-bottom: 5px;
+				color: yellow;
+			}
+			
+			h2
+			{
+				margin: 0px auto;
+				padding-top: 0px;
+				font-size: 20px;
+				line-height: 20px;
+				color: #FFC600;
+				text-transform: uppercase;
+			}
+			h3
+			{
+				margin: 0px auto;
+				padding-top: 0px;
+				font-size: 20px;
+				line-height: 20px;
+				color: white;
+				text-transform: uppercase;
+			}
+
+#slideshow3 {
+  margin: 0px auto;
+  position: relative;
+  width: 320px;
+  height: 220px;
+  padding: 0px;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow3 > div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+

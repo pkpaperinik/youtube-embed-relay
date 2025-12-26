@@ -1,0 +1,15 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1340px;
+  grid-gap: 0px;
+  grid-auto-rows: auto;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+.oneindex {
+  grid-column: 1 ;
+  grid-row: 1;
+}
+
+

@@ -1,0 +1,59 @@
+.wi {
+    display: inline-block;
+    font-family: weathericons;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ow-row {
+  position: relative;
+  overflow: hidden;
+  height: 50px
+  margin-bottom: 0%;
+}
+
+.ow-row:last-child {
+  margin-bottom: 0;
+}
+
+.ow-ico {
+  line-height: 1.0em;
+}
+
+.ow-widget {
+  /* background-color: #44b2e2; */
+  /* font: bold 30px/50px "Lucida Sans Unicode", Arial Black, Arial, Helvetica, sans-serif; */
+  color: #000000;
+}
+.ow-widget .pull-left {
+  float: unset;
+  align-items: left;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.ow-widget .pull-right {
+  float: unset;
+  align-items: right;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.ow-ico-current {
+  font-size: 30px;
+  text-align: center;
+  /* width: 0.5em;
+  padding-top: 0px; */
+}
+
+.ow-temp-current {
+  /* font-size: 40px; */
+
+  font:bold 30px/50px "Lucida Sans Unicode", Arial Black, Arial, Helvetica, sans-serif;
+  margin: 0;
+  text-align: center;
+}
+.ow-current-desc {
+  width: 200px;
+  line-height: 1.5em;
+}

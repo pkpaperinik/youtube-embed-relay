@@ -1,0 +1,19 @@
+
+
+#slideshown {
+  margin: 0px auto;
+  position: relative;
+  width: 360px;
+  height: 690px;
+  padding: 0px;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.4);
+}
+
+#slideshown > div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
