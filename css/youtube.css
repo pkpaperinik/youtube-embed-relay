@@ -5,6 +5,17 @@ iframe {
   height: "330";
   border: "0";
 }
+.video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+}
+.video iframe {
+  width: "658"; 
+  height: "330";
+}
 .video-container {
   position: relative;
   width: 100%;
