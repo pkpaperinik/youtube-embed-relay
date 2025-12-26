@@ -164,6 +164,7 @@
 .wrapper3 {
   display: grid;
   width: 660px;
+  height: 320px;
   grid-template-columns: 330px 330px;
   grid-gap: 2px;
   grid-auto-rows: auto;
