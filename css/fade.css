@@ -136,7 +136,6 @@
 .wrapper2 {
   display: grid;
   width: 1380px;
-  height: 320px;
   grid-template-columns: 660px 660px;
   grid-gap: 2px;
   grid-auto-rows: auto;
@@ -165,7 +164,6 @@
 .wrapper3 {
   display: grid;
   width: 660px;
-  height: 320px;
   grid-template-columns: 330px 330px;
   grid-gap: 2px;
   grid-auto-rows: auto;
