@@ -1,10 +1,10 @@
-  iframe {
-            max-width: 100%;
-            max-height: 100%;
-            width="658" 
-            height= "330"
-            border="0"
-        }
+iframe {
+  max-width: 100%;
+  max-height: 100%;
+  width: "658"; 
+  height: "330";
+  border: "0";
+}
 .video-container {
   position: relative;
   width: 100%;
