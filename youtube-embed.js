@@ -23,6 +23,8 @@ class YoutubeEmbed extends HTMLElement {
 
 		const div = document.createElement('div');
 		div.innerHTML = `
+		<link rel="stylesheet" href="css/fade.css">
+		<div class="video-container">
 <iframe
   width="${this.width}"
   height="${this.height}"
@@ -32,7 +34,7 @@ class YoutubeEmbed extends HTMLElement {
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="${this.title}"
-></iframe>
+></iframe></div>
 
 `;
 		shadow.appendChild(div);
