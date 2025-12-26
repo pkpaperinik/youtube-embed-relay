@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Orario</title>
+	<meta name="generator" content="BBEdit 11.1" />
+	<link rel="stylesheet" href="css/stylegiorno.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css'>
+  <link rel="stylesheet" href="css/stylemeteo1.css">
+
+
+
+	</head>
+
+<script>
+
+function WebDate() {
+	var now = new Date();
+	var year= now.getYear();if (year < 1000) year += 1900;
+	var min = now.getUTCMinutes();
+    if (min < 10) {
+        min = "0" + min;
+    }
+	nameDay = new Array('Domenica','Lunedi','Martedi','Mercoledi','Giovedi','Venerdi','Sabato');
+	nameMth = new Array('Gennaio','Febbraio','Marzo','Aprile','Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre','Dicembre');
+
+    // document.getElementById("ora").textContent=now.getHours();
+    // document.getElementById("minuti").textContent=min;
+    document.getElementById("data").textContent=now.getDate();
+    // document.getElementById("giorno").textContent=nameDay[now.getDay()];
+    // document.getElementById("mese").textContent=nameMth[now.getMonth()];
+    // document.getElementById("anno").textContent=year;
+
+
+	// document.write(
+	//   "<div class='calendar'>"+now.getHours()+":"+ min  +"<em> "+ nameDay[now.getDay()]+"</em></div><div class='calendar2' style=left:'2.5em'>"+ now.getDate()+" <em> "+ nameMth[now.getMonth()]+" "+year+"</em></div>" );
+
+
+}
+
+function doRefresh() { // refresh della pagina corrente
+          document.location.reload();
+}
+
+function AvviaOrologio() {
+   inizio = setTimeout("aggiorna()", 15000);
+   WebDate();
+}
+
+function aggiorna() {
+   if(inizio) {
+      clearTimeout(inizio);
+      inizio = 0;
+      WebDate();
+     }
+  inizio = setTimeout("aggiorna()", 5000);
+ }
+
+
+</script>
+
+
+<body onload="AvviaOrologio()">
+<!-- <script type="text/javascript">WebDate(); </script> -->
+
+
+<div id="weather">
+
+  <div v-if="!error" id="display">
+
+<div class='calendar'>
+    <span id="data">..</span>
+    <em>GIORNO</em>
+</div>
+<div class='calendar2'>
+
+	<style>
+	#demo {
+		position: relative;
+		overflow: hidden;
+		max-width: 200px;
+		margin: 0px auto 0 auto;
+	}
+	</style>
+
+		<section id="demo">
+			<div class="ow-row">
+				 <div class="ow-current-desc pull-left">
+			      <div class="ow-temp-current wi ow-ico pull-left"></div>
+				  	<div class="wi ow-ico ow-ico-current pull-right"></div>
+         </div>
+			</div>
+	 </section>
+
+
+
+		<script  src="js/meteo-giorno.js"></script>
+
+
+
+        <em> METEO DI OGGI </em>
+    
+        </div>
+</div>
+
+
+
+</body>
