@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta application-name="IpCam Slideshow"
+       data-allowsresizing="YES"
+       data-default-size="8,6"
+       data-min-size="1,1"
+       datamax-size="16,16"
+       data-allows-scrolling="NO" />
+
+	<title>IpCam slideshow</title>
+	<meta charset="utf-8" />
+
+	<meta name="generator" content="BBEdit 11.0" />
+
+<meta http-equiv="Cache-control" content="no-cache">
+
+
+<link rel="stylesheet" href="css/fade.css">
+
+
+<script>
+function AvviaOrologio() {
+   inizio = setTimeout("aggiorna()", 15000);
+  // refresh()
+   var int=self.setInterval(function(){refresh()},300000);
+}
+
+function aggiorna() {
+   if(inizio) {
+      clearTimeout(inizio);
+      inizio = 0;
+   }
+
+   inizio = setTimeout("aggiorna()", 5000);
+ }
+
+</script>
+
+    <script src="//cdn.flowplayer.com/releases/native/stable/plugins/hls.min.js"></script>
+    <script src="//cdn.flowplayer.com/releases/native/edge/plugins/debug.min.js"></script>
+    <script src="//cdn.flowplayer.com/releases/native/stable/plugins/hls.min.js"></script>
+
+</head>
+
+<body onload="AvviaOrologio()" style= background-color :#000000>
+  
+    <div class="wrapper" style= "width: 1380px;">
+        <div class="one">
+            <iframe title="Giorno" src="giorno.html" width='330' height='80' scrolling='no' style='border:0'></iframe>
+        </div>
+        <div class="two">
+            <iframe title="Meteo Oggi" src="meteooggi.html" width='330' height='80' scrolling='no' style='border:0'></iframe>
+        </div>
+        <div class="twobis">
+            <iframe title="Previsioni" src="previsioni.html" width='330' height='80' scrolling='no' style='border:0'></iframe>
+        </div>
+        <div class="three">
+            <iframe title="News" src="news1.html" width='350' height='80' scrolling='no' style='border:0'></iframe>
+        </div>
+    </div>
+
+    <div class="wrapper2" style= "width: 1380px;">
+        <div class="uno">
+   	            <div class="videobox">
+                <iframe style= "width: 660px; height: 330px;"
+                    src="https://pkpaperinik.github.io/youtube-embed-relay/youtube1.htm"
+					title="YouTube video 1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; auto_play; controls; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="due">
+            <div class="videobox">
+                <iframe style= "width: 660px; height: 330px;"
+                    src="https://pkpaperinik.github.io/youtube-embed-relay/youtube.htm"
+					title="YouTube video 1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; auto_play; controls; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    
+        <div class="tre">
+           <div class="wrapper3" style= "width: 660px;">
+
+                <div class="one">
+                    <img src="http://consolig.ddns.net:8080/quinto.php?t=" onload='setTimeout(function() {src = src.substring(0, (src.lastIndexOf("t=")+2))+(new Date()).getTime()}, 10000)' onerror='setTimeout(function() {src = src.substring(0, (src.lastIndexOf("t=")+2))+(new Date()).getTime()}, 10000)' alt='Tina Cucina' width='330' height='230'/>
+                </div>
+                <div class="two">
+                    <img src="http://consolig.noip.me:84/snapshot.cgi?&user=admin&pwd=313rossa&t=" onload='setTimeout(function() {src = src.substring(0, (src.lastIndexOf("t=")+2))+(new Date()).getTime()}, 10000)' onerror='setTimeout(function() {src = src.substring(0, (src.lastIndexOf("t=")+2))+(new Date()).getTime()}, 10000)' alt='Tina Sala' width='330' height='220'/> 
+                </div>
+            </div>
+        </div>
+
+        <div class="quattro">
+   	        <div class="videobox">
+				 <iframe style= "width: 660px; height: 330px;"
+                    src="https://pkpaperinik.github.io/youtube-embed-relay/youtube2.htm"
+					title="YouTube video 1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; auto_play; controls; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>            
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
