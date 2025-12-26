@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- CSP: permette solo iframe da YouTube -->
+    <!-- CSP: permette solo iframe da YouTube 
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'self';
                    frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
+-->
+<meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        style-src 'self';
+        frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+      ">
 
+    
     <!-- Referrer meno restrittivo -->
     <meta name="referrer" content="origin">
 
