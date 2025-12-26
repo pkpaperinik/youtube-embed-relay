@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- CSP: permette solo iframe da YouTube 
-    <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self';
-                   frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
--->
 <meta http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
@@ -16,31 +11,17 @@
       ">
     <!-- Referrer meno restrittivo -->
     <meta name="referrer" content="origin">
-    <link rel="stylesheet" href="css/youtube.css">
     
     <title>YouTube Embed Relay 2</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #000;
-            margin-left: 0px;
-            margin-top: 0px;
-            margin-left: 0px;
-        }
 
-    </style>
 </head>
-<div class="video-container">
-<iframe
+<iframe style= "width: 660px; height: 330px;"
     src="https://www.youtube-nocookie.com/embed/wkof2JmHhzs?si=uTjHcz4WWDAZJ5n1&autoplay=1"
     title="YouTube video"
     frameborder="0"
     allow="accelerometer; autoplay=1; auto_play=1; controls=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
-</iframe></div>
+</iframe>
 
 </body>
 </html>
