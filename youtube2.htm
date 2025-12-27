@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    
-    <meta http-equiv="Content-Security-Policy"
-      content="
-        default-src 'self';
-        style-src 'self' 'unsafe-inline';
-        frame-src https://www.youtube.com https://www.youtube-nocookie.com;
-      ">
+  <meta charset="UTF-8">
 
-    <!-- Referrer meno restrittivo -->
-    <meta name="referrer" content="origin">
+  <meta http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      style-src 'self' 'unsafe-inline';
+      frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+    ">
+
+  <meta name="referrer" content="origin">
+
+  <title>YouTube Embed Relay 2</title>
+
   <style>
-     html, body { width: 690px; 
-                  height: 350px; 
-                  margin: 0; 
-                  background: #000; 
-                  border: 0;
-                  border-top-width: 0px;
-                  border-right-width: 0px;
-                  border-bottom-width: 0px;
-                  border-left-width: 0px;
-                  border-image-source: none;
-                  border-image-width: 0;
-                  border-image-outset: 0;
-                  border-image-repeat: none;
-                }
+    html, body {
+      width: 690px;
+      height: 350px;
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 660px;
+      height: 330px;
+      border: 0;
+      display: block;
+      margin: auto;
+    }
   </style>
-    
-    <title>YouTube Embed Relay 2</title>
 </head>
+
 <body>
-<iframe style= "width: 660px; height: 330px; scrolling: "no"; "
-    src="https://www.youtube-nocookie.com/embed/RqWOFUgqhs4?si=kJEFR8mxMbV6VEPb&autoplay=1"
+
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/RqWOFUgqhs4?autoplay=1&mute=1"
     title="YouTube video"
-    frameborder="0"
-    allow="accelerometer; autoplay=1; auto_play=1; controls=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allow="autoplay; encrypted-media; picture-in-picture"
     allowfullscreen>
-</iframe>
+  </iframe>
 
 </body>
 </html>
