@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta http-equiv="Content-Security-Policy"
-      content="
-        default-src 'self';
-        style-src 'self' 'unsafe-inline';
-        frame-src https://www.youtube.com https://www.youtube-nocookie.com;
-      ">
+  <meta http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      style-src 'self' 'unsafe-inline';
+      frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+    ">
 
-    <!-- Referrer meno restrittivo -->
-    <meta name="referrer" content="origin">
+  <meta name="referrer" content="origin">
+
+  <title>YouTube Embed Relay 2</title>
+
   <style>
-     html, body { width: 690px; 
-                  height: 350px; 
-                  margin: 0; 
-                  background: #000; 
-                  border: 0;
-                  border-top-width: 0px;
-                  border-right-width: 0px;
-                  border-bottom-width: 0px;
-                  border-left-width: 0px;
-                  border-image-source: none;
-                  border-image-width: 0;
-                  border-image-outset: 0;
-                  border-image-repeat: none;
-                }
-  </style>
-    <title>YouTube Embed Relay</title>
+    html, body {
+      width: 690px;
+      height: 350px;
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+    }
 
+    iframe {
+      width: 660px;
+      height: 330px;
+      border: 0;
+      display: block;
+      margin: auto;
+    }
+  </style>
 </head>
+
 <body>
-<div>
-<iframe style= "width: 690px; height: 350px; scrolling: "no"; "
+
+  <iframe
+
     src="https://www.youtube-nocookie.com/embed/wkof2JmHhzs?si=uTjHcz4WWDAZJ5n1&autoplay=1"
     title="YouTube video"
     frameborder="0"
