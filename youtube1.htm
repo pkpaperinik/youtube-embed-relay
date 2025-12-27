@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
 
-<meta http-equiv="Content-Security-Policy"
+    <meta http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
-        style-src 'self';
+        style-src 'self' 'unsafe-inline';
         frame-src https://www.youtube.com https://www.youtube-nocookie.com;
       ">
+
     <!-- Referrer meno restrittivo -->
     <meta name="referrer" content="origin">
     
-    <title>YouTube Embed Relay 2</title>
+    <title>YouTube Embed Relay</title>
 
 </head>
-    <div>
+
+<div>
 <iframe style= "width: 660px; height: 330px;"
     src="https://www.youtube-nocookie.com/embed/wkof2JmHhzs?si=uTjHcz4WWDAZJ5n1&autoplay=1"
     title="YouTube video"
