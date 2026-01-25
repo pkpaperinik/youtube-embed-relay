@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>IpCam Slideshow</title>
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta name="referrer" content="origin">
+
+  <style>
+    /* RESET */
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    iframe, img {
+      display: block;
+      border: 0;
+    }
+
+    /* HEADER */
+    .header {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 80px;
+      width: 100%;
+    }
+
+    .header iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* MAIN GRID */
+    .main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 10px;
+      padding: 10px;
+      height: calc(100% - 80px);
+    }
+
+    .cell {
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .cell iframe,
+    .cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* CAMERA GRID */
+    .cams {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+    }
+
+  </style>
+
+  <script>
+    // Watchdog kiosk: reload ogni 30 minuti
+    setTimeout(() => location.reload(), 30 * 60 * 1000);
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <iframe src="giorno.html" scrolling="no"></iframe>
+    <iframe src="meteooggi.html" scrolling="no"></iframe>
+    <iframe src="previsioni.html" scrolling="no"></iframe>
+    <iframe src="news1.html" scrolling="no"></iframe>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- VIDEO 1 -->
+    <div class="cell">
+      <iframe
+        src="https://pkpaperinik.github.io/youtube-embed-relay/youtube1.htm"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        scrolling="no">
+      </iframe>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="cell">
+      <iframe
+        src="https://pkpaperinik.github.io/youtube-embed-relay/youtube.htm"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        scrolling="no">
+      </iframe>
+    </div>
+
+    <!-- CAMERE -->
+    <div class="cell cams">
+      <img
+        src="http://consolig.ddns.net:8080/tina.php?t="
+        alt="Tina Cucina"
+        onload="this.src=this.src.split('t=')[0]+'t='+Date.now()"
+        onerror="this.src=this.src.split('t=')[0]+'t='+Date.now()">
+      <img
+        src="http://consolig.ddns.net:8080/tinasala.php?t="
+        alt="Tina Sala"
+        onload="this.src=this.src.split('t=')[0]+'t='+Date.now()"
+        onerror="this.src=this.src.split('t=')[0]+'t='+Date.now()">
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="cell">
+      <iframe
+        src="https://pkpaperinik.github.io/youtube-embed-relay/youtube2.htm"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        scrolling="no">
+      </iframe>
+    </div>
+
+  </div>
+
+</body>
+</html>
