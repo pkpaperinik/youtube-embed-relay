@@ -1,57 +1,18 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>YouTube Kiosk</title>
 
-  <!-- NIENTE viewport avanzato: Chromium 72 impazzisce -->
-  <meta name="referrer" content="origin">
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      overflow: hidden;
-    }
-     iframe {
-       transform: scale(1.01);
-       transform-origin: 0 0;
-     }
+<video id="player" controls autoplay width="800"></video>
 
-    /* Contenitore aspect-ratio 16:9 */
-    .video-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-    }
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+var video = document.getElementById('player');
+var videoSrc = "https://ovp-rl.akamaized.net/Webcam/live_5365.smil/chunklist_b4346000.m3u8";
 
-    .video-container::before {
-      content: "";
-      display: block;
-      padding-top: 56.25%; /* 16:9 */
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="video-container">
-     https://mediaportal.regione.lombardia.it/portal/watch/live/56726aa0-a3a9-4a61-b3ef-8e5dd204e6cd
-  </div>
-
-</body>
-</html>
-
+if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource(videoSrc);
+    hls.attachMedia(video);
+}
+else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = videoSrc;
+}
+</script>
